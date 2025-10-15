@@ -1,0 +1,20 @@
+n = int(input("Nhập số nguyên dương n: "))
+dayFib = []
+def fib(n):
+    # Phần neo
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    # Phần đệ quy
+    else:
+        return fib(n-1) + fib(n-2)
+for i in range(n):
+    dayFib.append(fib(i))
+
+print("Dãy Fibonacci:", dayFib)
+tong = 0
+for item in dayFib:
+    tong += item
+
+print(f"Tổng các phần tử trong dãy Fibonacci: {tong}")
