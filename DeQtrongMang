@@ -1,0 +1,12 @@
+def recursive_search(arr, target, index = 0):
+    # Phần neo
+    if index >= len(arr):
+        return -1 # Không tìm thấy
+    if arr[index] == target:
+        return index
+    # Phần đệ quy
+    return recursive_search(arr, target, index + 1)
+
+# Ví dụ sử dụng
+numbers = [3, 5, 2, 4, 9, 1]
+print(recursive_search(numbers, 4)) # Output: 3
