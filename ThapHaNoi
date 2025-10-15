@@ -1,0 +1,14 @@
+def hanoi(n, A, B, C):
+    if n == 1:
+        print(f"Chuyển đĩa 1 từ {A} sang {C}")
+    else:
+        hanoi(n-1, A, C, B)
+        print(f"Chuyển đĩa {n} từ {A} sang {C}")
+        hanoi(n-1, B, A, C)
+
+# Gọi hàm với 6 đĩa
+hanoi(6, 'A', 'B', 'C')
+def hanoi_steps(n):
+    return 2**n - 1
+
+print("Số bước tối thiểu cho 5 đĩa là:", hanoi_steps(5))
