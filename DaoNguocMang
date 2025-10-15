@@ -1,0 +1,10 @@
+def reverse_array(arr, start = 0, end = None):
+    if end is None:
+        end = len(arr) - 1
+    # Phần neo
+    if start >= end:
+        return arr
+    # Phần đệ quy
+    arr[start], arr[end] = arr[end], arr[start]
+    return reverse_array(arr, start + 1, end - 1)
+print(reverse_array([2,4,6,9,14]))
